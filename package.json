@@ -1,0 +1,13 @@
+{
+  "name": "aui-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "chokidar": "^2.1.1",
+    "prettier": "^1.16.4",
+    "sass": "^1.17.0",
+    "uglify-js": "^3.4.9"
+  }
+}
