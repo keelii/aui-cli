@@ -47,7 +47,7 @@ class CodeFormatter {
         }
         const code = await readFile(file)
         const result = prettier.format(code.toString(), { 
-            ...this.cmd.format,
+            ...this.cmd.formatOptions,
             write: this.cmd.write,
             parser: "babel" 
         })

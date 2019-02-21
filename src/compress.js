@@ -2,7 +2,7 @@ var UglifyJS = require("uglify-js")
 
 const {
     log,
-    yellow, blue, green, red, gray,
+    yellow, green, red, gray,
     writeFile,
     readFile
 } = require('./base')

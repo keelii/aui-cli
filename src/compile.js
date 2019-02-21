@@ -32,9 +32,8 @@ class SassCompile {
     watchFiles(files) {
         chokidar.watch(files, { persistent: true })
         .on('change', this.compile.bind(this))
-        .on('add', path => log(`File ${path} has been added`))
+        .on('add', path => log(`[${red('ADDED')}] ${gray(path)} is watching.`))
         .on('unlink', path => log(`[${red('DELETED')}] ${gray(path)}`))
-        .on('change', (p, stats) => log(p, stats))
         .on('ready', () => log(`\n${blue('> Target files are watching ︎✔')}\n`))
     }
     async compileFiles(files) {
@@ -52,7 +51,7 @@ class SassCompile {
         }
     }
     async compile(file) {
-        const result = await sass.renderSync({file})
+        const result = await sass.renderSync({file})    
 
         if (this.cmd.write) {
             await writeFile(this.getFileName(file), result.css)
