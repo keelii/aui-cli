@@ -1,8 +1,11 @@
 {
   "name": "aui-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "bin": {
+    "aui": "index.js"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
     "chokidar": "^2.1.1",

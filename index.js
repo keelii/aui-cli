@@ -12,7 +12,7 @@ Usage:
   aui compile <file>... [options]
   aui compress <file>... [options]
   aui format <file>... [options]
-  aui -h | --help | --version
+  aui -h | --help
 
 Options:
   -d DIST, --dist=DIST              ${gray('Destnation directory path. [default: ./]')}
@@ -53,4 +53,3 @@ function main(cmd) {
 }
 
 main(processCMD(docopt(doc, { argv, help: true, })))
-
