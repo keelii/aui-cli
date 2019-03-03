@@ -10,9 +10,9 @@
 config.gypi
 CVS
 npm-debug.log
+yarn-error.log
 .idea
 .vscode
 .sass-cache
 .cache
 typings
-test

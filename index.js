@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const argv = process.argv.slice(2)
 const pkg = require('./package')
 const { gray, green, yellow } = require('./src/base')
@@ -12,6 +13,9 @@ Usage:
   aui compile <file>... [options]
   aui compress <file>... [options]
   aui format <file>... [options]
+  aui create ignore [<ignore_type>...]
+  aui create project
+  aui char
   aui -h | --help
 
 Options:
@@ -31,6 +35,7 @@ function processCMD(cmd) {
         watch: cmd['--watch'],
         write: cmd['--watch'] || cmd['--write'],
         reserved: cmd['--reserved'].split(','),
+        ignoreTypes: cmd['<ignore_type>'],
         formatOptions: {
             printWidth: Number(cmd['--print-width']),
             tabWidth: Number(cmd['--tab-width']),
@@ -49,6 +54,12 @@ function main(cmd) {
     }
     if (cmd.format) {
         require('./src/format')(cmd)
+    }
+    if (cmd.char) {
+        require('./src/char')(cmd)
+    }
+    if (cmd.create) {
+        require('./src/create')(cmd)
     }
 }
 
