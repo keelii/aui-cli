@@ -14,7 +14,8 @@ CVS
 npm-debug.log
 yarn-error.log
 .idea
+*.iml
 .vscode
-.sass-cache
 .cache
+.sass-cache
 typings
