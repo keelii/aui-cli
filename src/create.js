@@ -19,7 +19,7 @@ class Creator {
             'git': '.gitignore',
             'npm': '.npmignore'
         }
-        const source = path.join(__dirname, '../ignore', fileType[type])
+        const source = path.join(__dirname, '../ignore_files', fileType[type])
         const dest = path.join(cwd, fileType[type])
         
         try {
